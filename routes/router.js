@@ -67,6 +67,14 @@ router.post('/submit',async(req,res)=>{
     }
 })
 
-
+router.post('/get-all-records',async(req,res)=>{
+    try {
+        const getRecords = await User.find()
+        // console.log(getRecords)
+        res.send(getRecords)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
 
 module.exports = router;

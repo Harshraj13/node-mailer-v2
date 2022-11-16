@@ -1,5 +1,5 @@
-const router = require('express').Router();
 require('dotenv').config()
+const router = require('express').Router();
 const User = require('../model/userModel')
 const nodeMailer = require('nodemailer')
 

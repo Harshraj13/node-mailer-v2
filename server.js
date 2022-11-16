@@ -5,7 +5,6 @@ const db = require('./config/dbConfig')
 
 const router = require('./routes/router');
 
-
 const nodeMailer = require('nodemailer')
 
 const app = express()
@@ -20,5 +19,5 @@ const port = process.env.PORT||5000
 
 
 
-app.get('/', (req, res) => res.send('Hello World!'))
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.get('/', (req, res) => res.send('Welcome to nodemailer API v2!'))
+app.listen(port)

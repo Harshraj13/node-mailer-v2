@@ -64,6 +64,7 @@ router.post('/submit',async(req,res)=>{
         res.status(500).send({
             message:error.message
         })
+        res.end()
     }
 })
 
@@ -72,8 +73,10 @@ router.post('/get-all-records',async(req,res)=>{
         const getRecords = await User.find()
         // console.log(getRecords)
         res.send(getRecords)
+        res.end()
     } catch (error) {
         res.status(500).json(error)
+        res.end()
     }
 })
 
